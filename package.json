@@ -1,0 +1,13 @@
+{
+  "name": "ketut-agus-suardita-portfolio",
+  "version": "1.0.0",
+  "description": "Portofolio multi-halaman Ketut Agus Suardita — HTML, Tailwind CSS v4 (CLI lokal), dan Vanilla JavaScript.",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}

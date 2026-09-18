@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyek — Ketut Agus Suardita</title>
+  <meta name="description" content="Daftar proyek web dan mobile yang dikerjakan Ketut Agus Suardita, dari sistem administrasi desa sampai produk wisata digital." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="./dist/output.css" rel="stylesheet" />
+</head>
+<body data-page="projects" class="antialiased">
+
+  <header class="sticky top-0 z-50 bg-paper/90 backdrop-blur border-b border-ink/10">
+    <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-18 py-4">
+      <a href="index.html" class="font-display text-lg tracking-tight">Agus Suardita</a>
+      <nav class="hidden md:flex items-center gap-8 font-sans text-sm">
+        <a href="index.html" class="nav-link">Beranda</a>
+        <a href="about.html" class="nav-link">Tentang</a>
+        <a href="projects.html" class="nav-link" aria-current="page">Proyek</a>
+        <a href="achievements.html" class="nav-link">Prestasi</a>
+        <a href="contact.html" class="nav-link">Kontak</a>
+      </nav>
+      <a href="contact.html" class="hidden md:inline-flex btn-secondary text-sm">Ajak Bicara</a>
+      <button id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden relative w-9 h-9 flex flex-col justify-center items-center gap-1.5" aria-label="Buka menu">
+        <span class="menu-bar block w-6 h-0.5 bg-ink transition-transform duration-300"></span>
+        <span class="menu-bar block w-6 h-0.5 bg-ink transition-opacity duration-300"></span>
+        <span class="menu-bar block w-6 h-0.5 bg-ink transition-transform duration-300"></span>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="md:hidden hidden flex-col border-t border-ink/10 bg-paper">
+      <a href="index.html" class="px-6 py-4 border-b border-ink/5">Beranda</a>
+      <a href="about.html" class="px-6 py-4 border-b border-ink/5">Tentang</a>
+      <a href="projects.html" class="px-6 py-4 border-b border-ink/5" aria-current="page">Proyek</a>
+      <a href="achievements.html" class="px-6 py-4 border-b border-ink/5">Prestasi</a>
+      <a href="contact.html" class="px-6 py-4">Kontak</a>
+    </nav>
+  </header>
+
+  <main class="page-enter">
+
+    <section class="max-w-6xl mx-auto px-6 pt-20 pb-10">
+      <p class="font-mono text-xs text-rice mb-6">Proyek</p>
+      <h1 class="font-display text-4xl md:text-5xl max-w-2xl leading-tight">
+        Sistem, situs, dan produk yang sudah dipakai atau didemokan.
+      </h1>
+    </section>
+
+    <!-- ============ PROJECT GRID ============ -->
+    <section class="max-w-6xl mx-auto px-6 pt-4 pb-24">
+      <div id="project-grid" class="grid md:grid-cols-2 gap-6">
+
+        <article id="kalkulator-bangun-ruang" data-category="web" class="project-card border border-ink/10 p-8 flex flex-col">
+          <p class="font-mono text-xs text-lake mb-4">Web · Alat Interaktif</p>
+          <h3 class="font-display text-2xl mb-3">Kalkulator Bangun Ruang</h3>
+          <p class="text-sm text-ink-soft leading-relaxed flex-1">
+            Kalkulator volume dan luas permukaan untuk tujuh bangun ruang. Formulir
+            inputnya dibuat otomatis dari satu objek konfigurasi, sehingga menambah
+            bangun baru cukup dengan menambah satu entri saja. Dibangun dengan jQuery
+            yang dimuat lokal, tanpa CDN.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-6 mb-2 font-mono text-xs text-ink-soft">
+            <span class="border border-ink/15 px-2 py-1">jQuery</span>
+            <span class="border border-ink/15 px-2 py-1">Tailwind CSS</span>
+          </div>
+          <div class="flex flex-wrap gap-5 mt-4">
+            <button class="detail-btn text-left text-sm font-medium text-ink border-b border-brass w-fit">Ringkasan cepat</button>
+            <a href="demo-kalkulator-bangun-ruang.html" class="text-sm font-medium text-ink border-b border-brass w-fit">Coba demo →</a>
+          </div>
+        </article>
+
+        <article id="sangket-desa" data-category="web" class="project-card border border-ink/10 p-8 flex flex-col">
+          <p class="font-mono text-xs text-lake mb-4">Web · Sistem Administrasi</p>
+          <h3 class="font-display text-2xl mb-3">Sangket Desa</h3>
+          <p class="text-sm text-ink-soft leading-relaxed flex-1">
+            Sistem administrasi desa dengan frontend Next.js + Refine dan backend Laravel,
+            mencakup lima modul CRUD untuk layanan warga. Termasuk penanganan otentikasi
+            dan sinkronisasi state form antara frontend dan API.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-6 mb-2 font-mono text-xs text-ink-soft">
+            <span class="border border-ink/15 px-2 py-1">Next.js</span>
+            <span class="border border-ink/15 px-2 py-1">Refine</span>
+            <span class="border border-ink/15 px-2 py-1">Laravel</span>
+          </div>
+          <div class="flex flex-wrap gap-5 mt-4">
+            <button class="detail-btn text-left text-sm font-medium text-ink border-b border-brass w-fit">Ringkasan cepat</button>
+            <!-- <a href="sangket-desa.html" class="text-sm font-medium text-ink border-b border-brass w-fit">Baca studi kasus →</a> -->
+          </div>
+        </article>
+
+        <article id="kerobokan-beach" data-category="web" class="project-card border border-ink/10 p-8 flex flex-col">
+          <p class="font-mono text-xs text-lake mb-4">Web · Landing Page Wisata</p>
+          <h3 class="font-display text-2xl mb-3">Kerobokan Beach Adventure</h3>
+          <p class="text-sm text-ink-soft leading-relaxed flex-1">
+            Landing page dwibahasa untuk usaha wisata bahari di dekat Lovina, Bali Utara.
+            Berisi kartu paket wisata, accordion FAQ, SEO (Open Graph, JSON-LD, hreflang,
+            sitemap), dan pemesanan langsung lewat WhatsApp.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-6 mb-2 font-mono text-xs text-ink-soft">
+            <span class="border border-ink/15 px-2 py-1">HTML/CSS/JS</span>
+            <span class="border border-ink/15 px-2 py-1">SEO</span>
+            <span class="border border-ink/15 px-2 py-1">WhatsApp API</span>
+          </div>
+          <div class="flex flex-wrap gap-5 mt-4">
+            <button class="detail-btn text-left text-sm font-medium text-ink border-b border-brass w-fit">Ringkasan cepat</button>
+            <!-- <a href="kerobokan-beach-adventure.html" class="text-sm font-medium text-ink border-b border-brass w-fit">Baca studi kasus →</a> -->
+          </div>
+        </article>
+
+        <article id="siwita-bll" data-category="web" class="project-card border border-ink/10 p-8 flex flex-col">
+          <p class="font-mono text-xs text-lake mb-4">Web · Informasi Wisata</p>
+          <h3 class="font-display text-2xl mb-3">SI WITA BULELENG</h3>
+          <p class="text-sm text-ink-soft leading-relaxed flex-1">
+            Situs informasi wisata statis untuk proyek kelompok kuliah, memetakan pantai
+            dan air terjun di Kabupaten Buleleng dengan Leaflet.js dan arsitektur data
+            lokal (data.json). Dilengkapi dokumentasi dan wireframe.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-6 mb-2 font-mono text-xs text-ink-soft">
+            <span class="border border-ink/15 px-2 py-1">Bootstrap 5</span>
+            <span class="border border-ink/15 px-2 py-1">Leaflet.js</span>
+          </div>
+          <div class="flex flex-wrap gap-5 mt-4">
+            <button class="detail-btn text-left text-sm font-medium text-ink border-b border-brass w-fit">Ringkasan cepat</button>
+            <!-- <a href="siwita-buleleng.html" class="text-sm font-medium text-ink border-b border-brass w-fit">Baca studi kasus →</a> -->
+          </div>
+        </article>
+
+        
+
+      </div>
+
+      <p id="empty-state" class="hidden text-ink-soft text-center py-16 font-mono text-sm">Belum ada proyek pada kategori ini.</p>
+    </section>
+
+  </main>
+
+  <!-- ============ DETAIL MODAL ============ -->
+  <div id="project-modal" class="fixed inset-0 z-[60] hidden items-center justify-center p-4">
+    <div id="modal-backdrop" class="absolute inset-0 bg-ink/60"></div>
+    <div role="dialog" aria-modal="true" aria-labelledby="modal-title" class="relative bg-paper max-w-lg w-full p-8 max-h-[85vh] overflow-y-auto">
+      <button id="modal-close" aria-label="Tutup" class="absolute top-5 right-5 text-2xl leading-none text-ink-soft hover:text-ink">&times;</button>
+      <p id="modal-eyebrow" class="font-mono text-xs text-lake mb-4"></p>
+      <h3 id="modal-title" class="font-display text-2xl mb-4"></h3>
+      <p id="modal-body" class="text-sm text-ink-soft leading-relaxed"></p>
+    </div>
+  </div>
+
+  <footer class="border-t border-ink/10">
+    <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-ink-soft">
+      <p>© <span id="year"></span> Ketut Agus Suardita. Dibuat dengan HTML, Tailwind CSS, dan JavaScript.</p>
+      <div class="flex gap-6 font-mono">
+        <a href="https://github.com/AgWebs" target="_blank" rel="noopener" class="hover:text-ink">GitHub</a>
+        <a href="https://www.linkedin.com/in/ketut-agus-suardita" target="_blank" rel="noopener" class="hover:text-ink">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+  <script src="./js/projects.js"></script>
+</body>
+</html>

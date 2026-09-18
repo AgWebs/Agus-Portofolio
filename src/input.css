@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color: North Bali at dusk — volcanic stone, rice terrace, lake, temple brass */
+  --color-ink: #1b1f1c;
+  --color-ink-soft: #2a2f2a;
+  --color-paper: #f6f3ea;
+  --color-paper-dim: #ece7d9;
+  --color-rice: #46603f;
+  --color-rice-light: #6a8560;
+  --color-lake: #24444b;
+  --color-lake-light: #3d6570;
+  --color-brass: #b8935a;
+  --color-brass-light: #d3b384;
+  --color-clay: #8c4a3a;
+
+  /* Type */
+  --font-display: "Fraunces", "Iowan Old Style", ui-serif, Georgia, serif;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Motion */
+  --ease-terrace: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    background-color: var(--color-brass-light);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-lake);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  /* Contour-line motif, echoing rice-terrace topography — used once per page, never as tiling texture */
+  .terrace-lines {
+    background-image:
+      repeating-radial-gradient(circle at 12% 20%, transparent 0, transparent 38px, rgba(27, 31, 28, 0.05) 39px, rgba(27, 31, 28, 0.05) 40px);
+  }
+
+  .dark-terrace-lines {
+    background-image:
+      repeating-radial-gradient(circle at 88% 15%, transparent 0, transparent 42px, rgba(246, 243, 234, 0.06) 43px, rgba(246, 243, 234, 0.06) 44px);
+  }
+
+  .nav-link {
+    position: relative;
+    color: var(--color-ink-soft);
+    transition: color 0.2s var(--ease-terrace);
+  }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: -4px;
+    height: 1.5px;
+    background-color: var(--color-brass);
+    transition: right 0.25s var(--ease-terrace);
+  }
+  .nav-link:hover::after,
+  .nav-link[aria-current="page"]::after {
+    right: 0;
+  }
+  .nav-link[aria-current="page"] {
+    color: var(--color-ink);
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+    padding: 0.75rem 1.5rem;
+    border-radius: 2px;
+    font-weight: 500;
+    transition: background-color 0.2s var(--ease-terrace), transform 0.2s var(--ease-terrace);
+  }
+  .btn-primary:hover {
+    background-color: var(--color-rice);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--color-ink);
+    color: var(--color-ink);
+    padding: 0.7rem 1.45rem;
+    border-radius: 2px;
+    font-weight: 500;
+    transition: border-color 0.2s var(--ease-terrace), color 0.2s var(--ease-terrace);
+  }
+  .btn-secondary:hover {
+    border-color: var(--color-rice);
+    color: var(--color-rice);
+  }
+
+  .page-enter {
+    animation: page-enter 0.5s var(--ease-terrace) both;
+  }
+  @keyframes page-enter {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}

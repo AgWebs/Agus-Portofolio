@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>SI WITA BULELENG — Studi Kasus | Ketut Agus Suardita</title>
+  <meta name="description" content="Studi kasus SI WITA BULELENG: situs informasi wisata pantai dan air terjun di Kabupaten Buleleng dengan peta interaktif Leaflet.js." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="./dist/output.css" rel="stylesheet" />
+</head>
+<body data-page="project-detail" class="antialiased">
+
+  <header class="sticky top-0 z-50 bg-paper/90 backdrop-blur border-b border-ink/10">
+    <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-18 py-4">
+      <a href="index.html" class="font-display text-lg tracking-tight">Agus Suardita</a>
+      <nav class="hidden md:flex items-center gap-8 font-sans text-sm">
+        <a href="index.html" class="nav-link">Beranda</a>
+        <a href="about.html" class="nav-link">Tentang</a>
+        <a href="projects.html" class="nav-link" aria-current="page">Proyek</a>
+        <a href="achievements.html" class="nav-link">Prestasi</a>
+        <a href="contact.html" class="nav-link">Kontak</a>
+      </nav>
+      <a href="contact.html" class="hidden md:inline-flex btn-secondary text-sm">Ajak Bicara</a>
+      <button id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden relative w-9 h-9 flex flex-col justify-center items-center gap-1.5" aria-label="Buka menu">
+        <span class="menu-bar block w-6 h-0.5 bg-ink transition-transform duration-300"></span>
+        <span class="menu-bar block w-6 h-0.5 bg-ink transition-opacity duration-300"></span>
+        <span class="menu-bar block w-6 h-0.5 bg-ink transition-transform duration-300"></span>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="md:hidden hidden flex-col border-t border-ink/10 bg-paper">
+      <a href="index.html" class="px-6 py-4 border-b border-ink/5">Beranda</a>
+      <a href="about.html" class="px-6 py-4 border-b border-ink/5">Tentang</a>
+      <a href="projects.html" class="px-6 py-4 border-b border-ink/5" aria-current="page">Proyek</a>
+      <a href="achievements.html" class="px-6 py-4 border-b border-ink/5">Prestasi</a>
+      <a href="contact.html" class="px-6 py-4">Kontak</a>
+    </nav>
+  </header>
+
+  <main class="page-enter">
+
+    <!-- ============ HERO / JUDUL PROYEK ============ -->
+    <section class="terrace-lines border-b border-ink/10">
+      <div class="max-w-6xl mx-auto px-6 pt-12 pb-16 md:pt-16 md:pb-20">
+
+        <nav aria-label="Breadcrumb" class="font-mono text-xs text-ink-soft mb-8">
+          <a href="index.html" class="hover:text-ink">Beranda</a>
+          <span class="mx-2 text-ink/30">/</span>
+          <a href="projects.html" class="hover:text-ink">Proyek</a>
+          <span class="mx-2 text-ink/30">/</span>
+          <span class="text-ink">SI WITA BULELENG</span>
+        </nav>
+
+        <p class="font-mono text-xs text-rice mb-5">Web · Informasi Wisata</p>
+
+        <h1 class="font-display text-4xl md:text-6xl leading-[1.05] max-w-3xl">
+          SI WITA BULELENG
+        </h1>
+
+        <p class="mt-7 max-w-2xl text-lg text-ink-soft leading-relaxed">
+          Situs informasi wisata untuk proyek kelompok kuliah, memetakan pantai dan air terjun di Kabupaten Buleleng lewat peta interaktif, supaya calon pengunjung bisa menjelajah lokasi wisata tanpa perlu mencari satu-satu di internet.
+        </p>
+
+        <div class="mt-9 flex flex-wrap gap-4">
+          <!-- GANTI href tombol di bawah dengan tautan live demo/repo yang sebenarnya -->
+          <a href="#" target="_blank" rel="noopener" class="btn-primary">Lihat Live Demo</a>
+          <a href="https://github.com/AgWebs" target="_blank" rel="noopener" class="btn-secondary">Kode Sumber</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ META / FAKTA SINGKAT ============ -->
+    <section class="border-b border-ink/10 bg-paper-dim/60">
+      <div class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div>
+          <p class="font-mono text-xs text-rice mb-2">PERAN</p>
+          <p class="text-ink-soft">Frontend Developer</p>
+        </div>
+        <div>
+          <p class="font-mono text-xs text-rice mb-2">PERIODE</p>
+          <p class="text-ink-soft">2024</p>
+        </div>
+        <div>
+          <p class="font-mono text-xs text-rice mb-2">JENIS</p>
+          <p class="text-ink-soft">Proyek kelompok kuliah</p>
+        </div>
+        <div>
+          <p class="font-mono text-xs text-rice mb-2">TIM</p>
+          <p class="text-ink-soft">Kelompok mata kuliah</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GAMBAR UTAMA ============ -->
+    <!-- GANTI src di bawah dengan screenshot asli proyek, mis. ./assets/siwita-buleleng-cover.jpg -->
+    <section class="max-w-6xl mx-auto px-6 pt-16">
+      <figure>
+        <img
+          src="./assets/project-placeholder.svg"
+          alt="Tampilan peta wisata SI WITA BULELENG"
+          width="1600"
+          height="1000"
+          class="w-full aspect-[16/10] object-cover border border-ink/10"
+        />
+        <figcaption class="mt-3 font-mono text-xs text-ink-soft">
+          Peta interaktif titik wisata Kabupaten Buleleng.
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- ============ ISI STUDI KASUS ============ -->
+    <section class="max-w-6xl mx-auto px-6 py-20">
+      <div class="grid md:grid-cols-[1fr_2fr] gap-12">
+
+        <aside class="md:sticky md:top-28 self-start">
+          <p class="font-mono text-xs text-rice mb-4">TECH STACK</p>
+          <ul class="space-y-2 text-sm text-ink-soft">
+            <li>Bootstrap 5</li>
+            <li>Leaflet.js</li>
+            <li>JavaScript</li>
+            <li>JSON</li>
+          </ul>
+
+          <p class="font-mono text-xs text-rice mt-8 mb-4">TAUTAN</p>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" target="_blank" rel="noopener" class="border-b border-brass hover:text-rice">Live demo</a></li>
+            <li><a href="https://github.com/AgWebs" target="_blank" rel="noopener" class="border-b border-brass hover:text-rice">Repositori</a></li>
+          </ul>
+        </aside>
+
+        <div class="space-y-14">
+
+          <div>
+            <h2 class="font-display text-2xl md:text-3xl mb-4">Masalah</h2>
+            <p class="text-ink-soft leading-relaxed">
+              Informasi pantai dan air terjun di Buleleng tersebar di banyak sumber berbeda, tanpa satu tempat yang menampilkan lokasinya sekaligus di peta yang sama.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-2xl md:text-3xl mb-4">Pendekatan</h2>
+            <p class="text-ink-soft leading-relaxed mb-5">
+              Kelompok kami memilih menyimpan seluruh data lokasi wisata dalam satu berkas data.json, sehingga menambah titik wisata baru tidak perlu mengubah kode halaman sama sekali.
+            </p>
+            <ul class="space-y-3 text-ink-soft">
+              <li class="flex gap-3">
+                <span class="text-brass font-mono text-sm mt-0.5">01</span>
+                <span>Merancang wireframe terlebih dahulu supaya pembagian tugas antar anggota kelompok lebih jelas.</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-brass font-mono text-sm mt-0.5">02</span>
+                <span>Menyusun arsitektur data lokal (data.json) untuk memisahkan konten wisata dari tampilan.</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-brass font-mono text-sm mt-0.5">03</span>
+                <span>Mengintegrasikan Leaflet.js untuk menampilkan setiap titik wisata sebagai marker yang bisa diklik di peta.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="font-display text-2xl md:text-3xl mb-4">Hasil</h2>
+            <p class="text-ink-soft leading-relaxed">
+              Situs menampilkan pantai dan air terjun se-Kabupaten Buleleng dalam satu peta interaktif, lengkap dengan dokumentasi dan wireframe yang menyertai laporan tugas kelompok.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-2xl md:text-3xl mb-4">Yang saya pelajari</h2>
+            <p class="text-ink-soft leading-relaxed">
+              Memisahkan data dari tampilan sejak awal membuat kerja kelompok lebih lancar — anggota lain bisa menambah data wisata tanpa menyentuh kode JavaScript sama sekali.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALERI ============ -->
+    <!-- GANTI src tiap gambar di bawah dengan screenshot asli -->
+    <section class="border-t border-ink/10 bg-paper-dim/60">
+      <div class="max-w-6xl mx-auto px-6 py-20">
+        <h2 class="font-display text-2xl md:text-3xl mb-10">Tampilan Lain</h2>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <figure>
+            <img src="./assets/project-placeholder.svg" alt="Daftar lokasi wisata" width="1200" height="800" class="w-full aspect-[3/2] object-cover border border-ink/10" />
+            <figcaption class="mt-3 font-mono text-xs text-ink-soft">Daftar pantai dan air terjun per kecamatan.</figcaption>
+          </figure>
+          <figure>
+            <img src="./assets/project-placeholder.svg" alt="Detail titik wisata" width="1200" height="800" class="w-full aspect-[3/2] object-cover border border-ink/10" />
+            <figcaption class="mt-3 font-mono text-xs text-ink-soft">Detail info saat marker peta diklik.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NAVIGASI PROYEK ============ -->
+    <section class="max-w-6xl mx-auto px-6 py-16">
+      <div class="grid sm:grid-cols-2 gap-6">
+        <a href="kerobokan-beach-adventure.html" class="border border-ink/10 p-7 hover:border-rice transition-colors duration-300">
+          <p class="font-mono text-xs text-ink-soft mb-3">← Proyek sebelumnya</p>
+          <p class="font-display text-xl">Kerobokan Beach Adventure</p>
+        </a>
+        <a href="sangket-desa.html" class="border border-ink/10 p-7 hover:border-rice transition-colors duration-300 sm:text-right">
+          <p class="font-mono text-xs text-ink-soft mb-3">Proyek berikutnya →</p>
+          <p class="font-display text-xl">Sangket Desa</p>
+        </a>
+      </div>
+      <div class="mt-10 text-center">
+        <a href="projects.html" class="btn-secondary">Kembali ke Semua Proyek</a>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="bg-ink text-paper dark-terrace-lines">
+      <div class="max-w-6xl mx-auto px-6 py-20 text-center">
+        <h2 class="font-display text-3xl md:text-4xl max-w-xl mx-auto">Punya proyek serupa yang ingin dibangun?</h2>
+        <a href="contact.html" class="btn-secondary border-paper text-paper hover:border-brass hover:text-brass mt-8">Mulai Percakapan</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-ink/10">
+    <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-ink-soft">
+      <p>© <span id="year"></span> Ketut Agus Suardita. Dibuat dengan HTML, Tailwind CSS, dan JavaScript.</p>
+      <div class="flex gap-6 font-mono">
+        <a href="https://github.com/AgWebs" target="_blank" rel="noopener" class="hover:text-ink">GitHub</a>
+        <a href="https://www.linkedin.com/in/ketut-agus-suardita" target="_blank" rel="noopener" class="hover:text-ink">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>

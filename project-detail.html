@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- GANTI: judul & deskripsi sesuai proyek -->
+  <title>[Nama Proyek] — Studi Kasus | Ketut Agus Suardita</title>
+  <meta name="description" content="[Satu kalimat ringkas tentang proyek ini]." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="./dist/output.css" rel="stylesheet" />
+</head>
+<body data-page="project-detail" class="antialiased">
+
+  <!-- ============ NAVBAR (sama persis dengan halaman lain) ============ -->
+  <header class="sticky top-0 z-50 bg-paper/90 backdrop-blur border-b border-ink/10">
+    <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-18 py-4">
+      <a href="index.html" class="font-display text-lg tracking-tight">Agus Suardita</a>
+      <nav class="hidden md:flex items-center gap-8 font-sans text-sm">
+        <a href="index.html" class="nav-link">Beranda</a>
+        <a href="about.html" class="nav-link">Tentang</a>
+        <a href="projects.html" class="nav-link" aria-current="page">Proyek</a>
+        <a href="achievements.html" class="nav-link">Prestasi</a>
+        <a href="contact.html" class="nav-link">Kontak</a>
+      </nav>
+      <a href="contact.html" class="hidden md:inline-flex btn-secondary text-sm">Ajak Bicara</a>
+      <button id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden relative w-9 h-9 flex flex-col justify-center items-center gap-1.5" aria-label="Buka menu">
+        <span class="menu-bar block w-6 h-0.5 bg-ink transition-transform duration-300"></span>
+        <span class="menu-bar block w-6 h-0.5 bg-ink transition-opacity duration-300"></span>
+        <span class="menu-bar block w-6 h-0.5 bg-ink transition-transform duration-300"></span>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="md:hidden hidden flex-col border-t border-ink/10 bg-paper">
+      <a href="index.html" class="px-6 py-4 border-b border-ink/5">Beranda</a>
+      <a href="about.html" class="px-6 py-4 border-b border-ink/5">Tentang</a>
+      <a href="projects.html" class="px-6 py-4 border-b border-ink/5" aria-current="page">Proyek</a>
+      <a href="achievements.html" class="px-6 py-4 border-b border-ink/5">Prestasi</a>
+      <a href="contact.html" class="px-6 py-4">Kontak</a>
+    </nav>
+  </header>
+
+  <main class="page-enter">
+
+    <!-- ============ HERO / JUDUL PROYEK ============ -->
+    <section class="terrace-lines border-b border-ink/10">
+      <div class="max-w-6xl mx-auto px-6 pt-12 pb-16 md:pt-16 md:pb-20">
+
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="font-mono text-xs text-ink-soft mb-8">
+          <a href="index.html" class="hover:text-ink">Beranda</a>
+          <span class="mx-2 text-ink/30">/</span>
+          <a href="projects.html" class="hover:text-ink">Proyek</a>
+          <span class="mx-2 text-ink/30">/</span>
+          <!-- GANTI -->
+          <span class="text-ink">[Nama Proyek]</span>
+        </nav>
+
+        <!-- GANTI: kategori, mis. "Web · Landing Page" atau "Mobile · Aplikasi" -->
+        <p class="font-mono text-xs text-rice mb-5">[Kategori]</p>
+
+        <h1 class="font-display text-4xl md:text-6xl leading-[1.05] max-w-3xl">
+          [Nama Proyek]
+        </h1>
+
+        <p class="mt-7 max-w-2xl text-lg text-ink-soft leading-relaxed">
+          <!-- GANTI: satu kalimat ringkas — apa proyek ini dan untuk siapa -->
+          [Satu-dua kalimat ringkas tentang apa proyek ini dan siapa penggunanya.]
+        </p>
+
+        <div class="mt-9 flex flex-wrap gap-4">
+          <!-- GANTI/HAPUS tautan yang tidak relevan -->
+          <a href="#" target="_blank" rel="noopener" class="btn-primary">Lihat Live Demo</a>
+          <a href="https://github.com/AgWebs" target="_blank" rel="noopener" class="btn-secondary">Kode Sumber</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ META / FAKTA SINGKAT ============ -->
+    <section class="border-b border-ink/10 bg-paper-dim/60">
+      <div class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div>
+          <p class="font-mono text-xs text-rice mb-2">PERAN</p>
+          <p class="text-ink-soft">[mis. Full-stack Developer]</p>
+        </div>
+        <div>
+          <p class="font-mono text-xs text-rice mb-2">PERIODE</p>
+          <p class="text-ink-soft">[mis. 2026]</p>
+        </div>
+        <div>
+          <p class="font-mono text-xs text-rice mb-2">JENIS</p>
+          <p class="text-ink-soft">[mis. Proyek klien / kampus / pribadi]</p>
+        </div>
+        <div>
+          <p class="font-mono text-xs text-rice mb-2">TIM</p>
+          <p class="text-ink-soft">[mis. Solo / 3 orang]</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GAMBAR UTAMA ============ -->
+    <section class="max-w-6xl mx-auto px-6 pt-16">
+      <figure>
+        <!-- GANTI src dengan screenshot proyek, mis. ./assets/nama-proyek-cover.jpg -->
+        <img
+          src="./assets/project-placeholder.svg"
+          alt="[Deskripsi gambar sampul]"
+          width="1600"
+          height="1000"
+          class="w-full aspect-[16/10] object-cover border border-ink/10"
+        />
+        <figcaption class="mt-3 font-mono text-xs text-ink-soft">
+          [Keterangan singkat gambar ini]
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- ============ ISI STUDI KASUS ============ -->
+    <section class="max-w-6xl mx-auto px-6 py-20">
+      <div class="grid md:grid-cols-[1fr_2fr] gap-12">
+
+        <!-- Sidebar: tech stack (sticky di desktop) -->
+        <aside class="md:sticky md:top-28 self-start">
+          <p class="font-mono text-xs text-rice mb-4">TECH STACK</p>
+          <ul class="space-y-2 text-sm text-ink-soft">
+            <!-- GANTI daftar di bawah -->
+            <li>[Teknologi 1]</li>
+            <li>[Teknologi 2]</li>
+            <li>[Teknologi 3]</li>
+          </ul>
+
+          <p class="font-mono text-xs text-rice mt-8 mb-4">TAUTAN</p>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="border-b border-brass hover:text-rice">Live demo</a></li>
+            <li><a href="#" class="border-b border-brass hover:text-rice">Repositori</a></li>
+          </ul>
+        </aside>
+
+        <!-- Narasi -->
+        <div class="space-y-14">
+
+          <div>
+            <h2 class="font-display text-2xl md:text-3xl mb-4">Masalah</h2>
+            <p class="text-ink-soft leading-relaxed">
+              <!-- GANTI: kondisi sebelum proyek ini ada. Apa yang menyulitkan? -->
+              [Kondisi atau masalah sebelum proyek ini dibuat.]
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-2xl md:text-3xl mb-4">Pendekatan</h2>
+            <p class="text-ink-soft leading-relaxed mb-5">
+              <!-- GANTI: bagaimana Anda menyelesaikannya, keputusan teknis penting -->
+              [Ringkasan pendekatan dan keputusan teknis utama.]
+            </p>
+            <ul class="space-y-3 text-ink-soft">
+              <li class="flex gap-3">
+                <span class="text-brass font-mono text-sm mt-0.5">01</span>
+                <span>[Langkah atau keputusan penting pertama.]</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-brass font-mono text-sm mt-0.5">02</span>
+                <span>[Langkah atau keputusan penting kedua.]</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-brass font-mono text-sm mt-0.5">03</span>
+                <span>[Langkah atau keputusan penting ketiga.]</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="font-display text-2xl md:text-3xl mb-4">Hasil</h2>
+            <p class="text-ink-soft leading-relaxed">
+              <!-- GANTI: hasil akhir. Kalau ada angka, sebutkan; kalau tidak, cukup jujur deskriptif -->
+              [Hasil akhir proyek ini — jujur dan spesifik, bukan klaim generik.]
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-2xl md:text-3xl mb-4">Yang saya pelajari</h2>
+            <p class="text-ink-soft leading-relaxed">
+              <!-- GANTI: bagian ini yang paling sering dibaca recruiter. Jujur saja -->
+              [Satu pelajaran nyata dari mengerjakan proyek ini.]
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALERI ============ -->
+    <section class="border-t border-ink/10 bg-paper-dim/60">
+      <div class="max-w-6xl mx-auto px-6 py-20">
+        <h2 class="font-display text-2xl md:text-3xl mb-10">Tampilan Lain</h2>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <!-- GANTI src dan keterangan tiap gambar -->
+          <figure>
+            <img src="./assets/project-placeholder.svg" alt="[Deskripsi gambar]" width="1200" height="800" class="w-full aspect-[3/2] object-cover border border-ink/10" />
+            <figcaption class="mt-3 font-mono text-xs text-ink-soft">[Keterangan gambar]</figcaption>
+          </figure>
+          <figure>
+            <img src="./assets/project-placeholder.svg" alt="[Deskripsi gambar]" width="1200" height="800" class="w-full aspect-[3/2] object-cover border border-ink/10" />
+            <figcaption class="mt-3 font-mono text-xs text-ink-soft">[Keterangan gambar]</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NAVIGASI PROYEK ============ -->
+    <!-- GANTI: arahkan ke dua proyek tetangga di projects.html, lalu perbarui juga
+         tautan "berikutnya" pada proyek sebelum/sesudahnya supaya rantainya nyambung -->
+    <section class="max-w-6xl mx-auto px-6 py-16">
+      <div class="grid sm:grid-cols-2 gap-6">
+        <a href="#" class="border border-ink/10 p-7 hover:border-rice transition-colors duration-300">
+          <p class="font-mono text-xs text-ink-soft mb-3">← Proyek sebelumnya</p>
+          <p class="font-display text-xl">[Nama Proyek Sebelumnya]</p>
+        </a>
+        <a href="#" class="border border-ink/10 p-7 hover:border-rice transition-colors duration-300 sm:text-right">
+          <p class="font-mono text-xs text-ink-soft mb-3">Proyek berikutnya →</p>
+          <p class="font-display text-xl">[Nama Proyek Berikutnya]</p>
+        </a>
+      </div>
+      <div class="mt-10 text-center">
+        <a href="projects.html" class="btn-secondary">Kembali ke Semua Proyek</a>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="bg-ink text-paper dark-terrace-lines">
+      <div class="max-w-6xl mx-auto px-6 py-20 text-center">
+        <h2 class="font-display text-3xl md:text-4xl max-w-xl mx-auto">Punya proyek serupa yang ingin dibangun?</h2>
+        <a href="contact.html" class="btn-secondary border-paper text-paper hover:border-brass hover:text-brass mt-8">Mulai Percakapan</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-ink/10">
+    <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-ink-soft">
+      <p>© <span id="year"></span> Ketut Agus Suardita. Dibuat dengan HTML, Tailwind CSS, dan JavaScript.</p>
+      <div class="flex gap-6 font-mono">
+        <a href="https://github.com/AgWebs" target="_blank" rel="noopener" class="hover:text-ink">GitHub</a>
+        <a href="https://www.linkedin.com/in/ketut-agus-suardita" target="_blank" rel="noopener" class="hover:text-ink">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>

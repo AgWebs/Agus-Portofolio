@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalkulator Bangun Ruang — Ketut Agus Suardita</title>
+  <meta name="description" content="Kalkulator volume dan luas permukaan bangun ruang: kubus, balok, tabung, bola, kerucut, limas, dan prisma. Dibangun dengan Vanilla JavaScript." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="./dist/output.css" rel="stylesheet" />
+</head>
+<body data-page="demo-kalkulator" class="antialiased">
+
+  <header class="sticky top-0 z-50 bg-paper/90 backdrop-blur border-b border-ink/10">
+    <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-18 py-4">
+      <a href="index.html" class="font-display text-lg tracking-tight">Agus Suardita</a>
+      <nav class="hidden md:flex items-center gap-8 font-sans text-sm">
+        <a href="index.html" class="nav-link">Beranda</a>
+        <a href="about.html" class="nav-link">Tentang</a>
+        <a href="projects.html" class="nav-link" aria-current="page">Proyek</a>
+        <a href="achievements.html" class="nav-link">Prestasi</a>
+        <a href="contact.html" class="nav-link">Kontak</a>
+      </nav>
+      <a href="contact.html" class="hidden md:inline-flex btn-secondary text-sm">Ajak Bicara</a>
+      <button id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden relative w-9 h-9 flex flex-col justify-center items-center gap-1.5" aria-label="Buka menu">
+        <span class="menu-bar block w-6 h-0.5 bg-ink transition-transform duration-300"></span>
+        <span class="menu-bar block w-6 h-0.5 bg-ink transition-opacity duration-300"></span>
+        <span class="menu-bar block w-6 h-0.5 bg-ink transition-transform duration-300"></span>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="md:hidden hidden flex-col border-t border-ink/10 bg-paper">
+      <a href="index.html" class="px-6 py-4 border-b border-ink/5">Beranda</a>
+      <a href="about.html" class="px-6 py-4 border-b border-ink/5">Tentang</a>
+      <a href="projects.html" class="px-6 py-4 border-b border-ink/5" aria-current="page">Proyek</a>
+      <a href="achievements.html" class="px-6 py-4 border-b border-ink/5">Prestasi</a>
+      <a href="contact.html" class="px-6 py-4">Kontak</a>
+    </nav>
+  </header>
+
+  <main class="page-enter">
+
+    <!-- ============ JUDUL ============ -->
+    <section class="terrace-lines border-b border-ink/10">
+      <div class="max-w-6xl mx-auto px-6 pt-12 pb-14">
+        <nav aria-label="Breadcrumb" class="font-mono text-xs text-ink-soft mb-8">
+          <a href="index.html" class="hover:text-ink">Beranda</a>
+          <span class="mx-2 text-ink/30">/</span>
+          <a href="projects.html" class="hover:text-ink">Proyek</a>
+          <span class="mx-2 text-ink/30">/</span>
+          <span class="text-ink">Kalkulator Bangun Ruang</span>
+        </nav>
+        <p class="font-mono text-xs text-rice mb-5">Demo Interaktif</p>
+        <h1 class="font-display text-4xl md:text-5xl leading-tight">Kalkulator Bangun Ruang</h1>
+        <p class="mt-6 max-w-2xl text-lg text-ink-soft leading-relaxed">
+          Menghitung volume dan luas permukaan tujuh bangun ruang. Formulir inputnya
+          dibuat otomatis dari satu objek konfigurasi, jadi menambah bangun baru cukup
+          dengan menambah satu entri di berkas JavaScript-nya.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ KALKULATOR ============ -->
+    <section class="max-w-6xl mx-auto px-6 py-16">
+      <div class="grid lg:grid-cols-3 gap-6">
+
+        <!-- 1. Pilih bangun ruang -->
+        <div class="border border-ink/10 p-7">
+          <p class="font-mono text-xs text-rice mb-5">01 — PILIH BANGUN RUANG</p>
+
+          <label for="shape" class="block text-sm font-medium mb-2">Bangun Ruang</label>
+          <select id="shape" class="w-full border border-ink/20 bg-transparent px-4 py-3 focus:border-rice outline-none">
+            <option value="kubus">Kubus</option>
+            <option value="balok">Balok</option>
+            <option value="tabung">Tabung</option>
+            <option value="bola">Bola</option>
+            <option value="kerucut">Kerucut</option>
+            <option value="limas_segiempat">Limas Segi Empat</option>
+            <option value="prisma_segitiga">Prisma Segitiga</option>
+          </select>
+
+          <label for="satuan" class="block text-sm font-medium mt-6 mb-2">Satuan Panjang</label>
+          <select id="satuan" class="w-full border border-ink/20 bg-transparent px-4 py-3 focus:border-rice outline-none">
+            <option value="cm">cm</option>
+            <option value="m">m</option>
+            <option value="mm">mm</option>
+          </select>
+          <p class="mt-3 text-xs text-ink-soft leading-relaxed">
+            Volume memakai satuan kubik (cm³), luas permukaan memakai satuan persegi (cm²).
+          </p>
+        </div>
+
+        <!-- 2. Parameter -->
+        <div class="border border-ink/10 p-7 lg:col-span-2">
+          <p class="font-mono text-xs text-rice mb-5">02 — ISI PARAMETER</p>
+
+          <form id="param-form" class="grid sm:grid-cols-2 gap-5" novalidate>
+            <!-- Field dirender otomatis oleh js/kalkulator-ruang.js -->
+          </form>
+
+          <div class="mt-7 flex flex-wrap gap-4">
+            <button id="hitung-btn" class="btn-primary">Hitung</button>
+            <button id="reset-btn" type="button" class="btn-secondary">Reset</button>
+          </div>
+
+          <p id="notif" role="alert" class="hidden mt-5 text-sm text-clay border border-clay/30 px-4 py-3"></p>
+        </div>
+
+        <!-- 3. Rumus & hasil -->
+        <div class="border border-ink/10 p-7 lg:col-span-3">
+          <p class="font-mono text-xs text-rice mb-5">03 — RUMUS &amp; HASIL</p>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h2 class="font-display text-xl mb-4">Rumus</h2>
+              <dl class="space-y-3 font-mono text-sm">
+                <div>
+                  <dt class="text-xs text-ink-soft mb-1">Volume</dt>
+                  <dd id="rumus-volume" class="text-ink">—</dd>
+                </div>
+                <div>
+                  <dt class="text-xs text-ink-soft mb-1">Luas permukaan</dt>
+                  <dd id="rumus-luas" class="text-ink">—</dd>
+                </div>
+              </dl>
+              <ul id="catatan" class="mt-5 space-y-1 text-xs text-ink-soft list-disc list-inside"></ul>
+            </div>
+
+            <div>
+              <h2 class="font-display text-xl mb-4">Hasil</h2>
+              <div class="grid grid-cols-2 gap-5">
+                <div class="border-l-2 border-brass pl-4">
+                  <p class="font-mono text-xs text-ink-soft mb-2">VOLUME</p>
+                  <p id="hasil-volume" class="font-display text-2xl">—</p>
+                </div>
+                <div class="border-l-2 border-lake pl-4">
+                  <p class="font-mono text-xs text-ink-soft mb-2">LUAS PERMUKAAN</p>
+                  <p id="hasil-luas" class="font-display text-2xl">—</p>
+                </div>
+              </div>
+              <p id="detail-hasil" class="mt-5 text-sm text-ink-soft">Isi parameter lalu tekan Hitung.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ CATATAN TEKNIS ============ -->
+    <section class="bg-ink text-paper dark-terrace-lines">
+      <div class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
+        <div>
+          <h2 class="font-display text-2xl mb-4">Cara kerjanya</h2>
+          <p class="text-paper/80 leading-relaxed">
+            Semua bangun ruang didefinisikan dalam satu objek <span class="font-mono text-sm">SHAPES</span>:
+            daftar field input, rumus volume, rumus luas permukaan, dan catatannya. Fungsi
+            render membaca definisi itu lalu membangun formulirnya sendiri, sehingga tidak
+            ada HTML input yang ditulis manual.
+          </p>
+        </div>
+        <div>
+          <h2 class="font-display text-2xl mb-4">jQuery, tanpa CDN</h2>
+          <p class="text-paper/80 leading-relaxed">
+            Interaksinya ditulis dengan jQuery 3.7.1, tetapi pustakanya dimuat dari
+            berkas lokal di <span class="font-mono text-sm">js/vendor/</span> — bukan
+            CDN — sehingga halaman tetap berfungsi meski dibuka tanpa koneksi internet.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 py-14 text-center">
+      <a href="projects.html" class="btn-secondary">Kembali ke Semua Proyek</a>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-ink/10">
+    <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-ink-soft">
+      <p>© <span id="year"></span> Ketut Agus Suardita. Dibuat dengan HTML, Tailwind CSS, dan JavaScript.</p>
+      <div class="flex gap-6 font-mono">
+        <a href="https://github.com/AgWebs" target="_blank" rel="noopener" class="hover:text-ink">GitHub</a>
+        <a href="https://www.linkedin.com/in/ketut-agus-suardita" target="_blank" rel="noopener" class="hover:text-ink">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+  <!-- jQuery 3.7.1 dimuat lokal (bukan CDN) agar halaman tetap jalan offline -->
+  <script src="./js/vendor/jquery-3.7.1.min.js"></script>
+  <script src="./js/kalkulator-ruang.js"></script>
+</body>
+</html>

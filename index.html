@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ketut Agus Suardita — Software Engineer & Full-Stack Developer</title>
+  <meta name="description" content="Portofolio Ketut Agus Suardita, mahasiswa Teknologi Rekayasa Perangkat Lunak Undiksha dan pengembang full-stack web/mobile berbasis di Bali Utara." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="./dist/output.css" rel="stylesheet" />
+</head>
+<body data-page="home" class="antialiased">
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="sticky top-0 z-50 bg-paper/90 backdrop-blur border-b border-ink/10">
+    <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-18 py-4">
+      <a href="index.html" class="font-display text-lg tracking-tight">Agus Suardita</a>
+
+      <nav class="hidden md:flex items-center gap-8 font-sans text-sm">
+        <a href="index.html" class="nav-link" aria-current="page">Beranda</a>
+        <a href="about.html" class="nav-link">Tentang</a>
+        <a href="projects.html" class="nav-link">Proyek</a>
+        <a href="achievements.html" class="nav-link">Prestasi</a>
+        <a href="contact.html" class="nav-link">Kontak</a>
+      </nav>
+
+      <a href="contact.html" class="hidden md:inline-flex btn-secondary text-sm">Ajak Bicara</a>
+
+      <button id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden relative w-9 h-9 flex flex-col justify-center items-center gap-1.5" aria-label="Buka menu">
+        <span class="menu-bar block w-6 h-0.5 bg-ink transition-transform duration-300"></span>
+        <span class="menu-bar block w-6 h-0.5 bg-ink transition-opacity duration-300"></span>
+        <span class="menu-bar block w-6 h-0.5 bg-ink transition-transform duration-300"></span>
+      </button>
+    </div>
+
+    <nav id="mobile-menu" class="md:hidden hidden flex-col border-t border-ink/10 bg-paper">
+      <a href="index.html" class="px-6 py-4 border-b border-ink/5" aria-current="page">Beranda</a>
+      <a href="about.html" class="px-6 py-4 border-b border-ink/5">Tentang</a>
+      <a href="projects.html" class="px-6 py-4 border-b border-ink/5">Proyek</a>
+      <a href="achievements.html" class="px-6 py-4 border-b border-ink/5">Prestasi</a>
+      <a href="contact.html" class="px-6 py-4">Kontak</a>
+    </nav>
+  </header>
+
+  <main class="page-enter">
+
+    <!-- ============ HERO ============ -->
+    <section class="relative overflow-hidden terrace-lines">
+      <div class="max-w-6xl mx-auto px-6 pt-20 pb-24 md:pt-28 md:pb-32 grid md:grid-cols-[1.2fr_0.8fr] gap-14 items-center">
+        <div>
+          <p class="font-mono text-xs text-rice mb-6">Singaraja, Buleleng — Bali Utara</p>
+          <h1 class="font-display text-[2.75rem] leading-[1.05] md:text-6xl md:leading-[0.98]">
+            Ketut Agus Suardita membangun perangkat lunak
+            <span class="italic text-rice">yang dipakai</span>,
+            bukan sekadar dipamerkan.
+          </h1>
+          <p class="mt-8 max-w-xl text-lg text-ink-soft leading-relaxed">
+            Mahasiswa Teknologi Rekayasa Perangkat Lunak di Undiksha, mengerjakan sistem
+            untuk desa, pelaku wisata, dan proyek riset kampus — dari rancangan antarmuka
+            sampai server yang menjalankannya.
+          </p>
+          <div class="mt-10 flex flex-wrap gap-4">
+            <a href="projects.html" class="btn-primary">Lihat Proyek</a>
+            <a href="contact.html" class="btn-secondary">Hubungi Saya</a>
+          </div>
+          <p class="mt-8 font-mono text-xs text-ink-soft">
+            Peraih Medallion For Excellence LKS Dikmen 2025 dan Juara 1 Web Technologies LKS Provinsi Bali.
+          </p>
+        </div>
+
+        <div class="relative mx-auto md:mx-0 w-full max-w-xs">
+          <div class="absolute -inset-3 border border-brass/60 -z-10"></div>
+          <img
+            src="./assets/portrait-main-duotone.jpg"
+            alt="Potret Ketut Agus Suardita"
+            width="720"
+            height="900"
+            class="w-full aspect-[4/5] object-cover"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ QUICK FACTS ============ -->
+    <section class="border-y border-ink/10 bg-paper-dim/60">
+      <div class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div>
+          <p class="font-display text-3xl">D4 TRPL</p>
+          <p class="text-sm text-ink-soft mt-1">Undiksha, Software Engineering Technology</p>
+        </div>
+        <div>
+          <p class="font-display text-3xl">5+</p>
+          <p class="text-sm text-ink-soft mt-1">Proyek nyata dikirim ke klien &amp; kampus</p>
+        </div>
+        <div>
+          <p class="font-display text-3xl">Full-Stack</p>
+          <p class="text-sm text-ink-soft mt-1">Dari Figma sampai deployment</p>
+        </div>
+        <div>
+          <p class="font-display text-3xl">Bali Utara</p>
+          <p class="text-sm text-ink-soft mt-1">Basis kerja &amp; sumber cerita produk</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED PROJECTS ============ -->
+    <section class="max-w-6xl mx-auto px-6 py-24">
+      <div class="flex items-end justify-between mb-12 flex-wrap gap-4">
+        <h2 class="font-display text-3xl md:text-4xl max-w-md">Proyek yang mewakili cara saya bekerja</h2>
+        <a href="projects.html" class="btn-secondary text-sm">Semua Proyek</a>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <article class="group border border-ink/10 p-7 hover:border-rice transition-colors duration-300">
+          <p class="font-mono text-xs text-lake mb-4">Aplikasi Desa</p>
+          <h3 class="font-display text-xl mb-3">Sangket Desa</h3>
+          <p class="text-sm text-ink-soft leading-relaxed">
+            Sistem administrasi desa dengan frontend Next.js + Refine dan backend Laravel,
+            menangani lima modul CRUD untuk pelayanan warga.
+          </p>
+          <a href="projects.html#sangket-desa" class="inline-block mt-5 text-sm font-medium text-ink border-b border-brass">Lihat detail</a>
+        </article>
+
+        <article class="group border border-ink/10 p-7 hover:border-rice transition-colors duration-300">
+          <p class="font-mono text-xs text-lake mb-4">Landing Page Wisata</p>
+          <h3 class="font-display text-xl mb-3">Kerobokan Beach Adventure</h3>
+          <p class="text-sm text-ink-soft leading-relaxed">
+            Landing page dwibahasa untuk usaha wisata bahari di Lovina — lengkap dengan
+            SEO, pemesanan via WhatsApp, dan paket interaktif.
+          </p>
+          <a href="projects.html#kerobokan-beach" class="inline-block mt-5 text-sm font-medium text-ink border-b border-brass">Lihat detail</a>
+        </article>
+
+        <article class="group border border-ink/10 p-7 hover:border-rice transition-colors duration-300">
+          <p class="font-mono text-xs text-lake mb-4">Alat Interaktif</p>
+          <h3 class="font-display text-xl mb-3">Kalkulator Bangun Ruang</h3>
+          <p class="text-sm text-ink-soft leading-relaxed">
+            Kalkulator volume dan luas permukaan tujuh bangun ruang, dibangun dengan
+            jQuery — formulirnya dirender otomatis dari satu konfigurasi.
+          </p>
+          <a href="demo-kalkulator-bangun-ruang.html" class="inline-block mt-5 text-sm font-medium text-ink border-b border-brass">Coba demo</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ STACK STRIP ============ -->
+    <section class="bg-ink text-paper dark-terrace-lines">
+      <div class="max-w-6xl mx-auto px-6 py-20">
+        <h2 class="font-display text-3xl md:text-4xl max-w-md mb-10">Alat yang dipakai setiap hari</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-y-6 font-mono text-sm text-paper/80">
+          <span>C / C++</span>
+          <span>PHP · Laravel</span>
+          <span>JavaScript</span>
+          <span>React · Next.js</span>
+          <span>Dart · Flutter</span>
+          <span>SQL</span>
+          <span>Git · GitHub</span>
+          <span>Postman</span>
+          <span>Figma</span>
+          <span>Logisim</span>
+          <span>Vercel</span>
+          <span>Railway</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="max-w-6xl mx-auto px-6 py-24 text-center">
+      <h2 class="font-display text-3xl md:text-4xl max-w-xl mx-auto">Punya sistem yang ingin dibangun atau dibenahi?</h2>
+      <p class="mt-4 text-ink-soft">Saya terbuka untuk proyek magang, kerja sama kampus, atau proyek klien lepas.</p>
+      <a href="contact.html" class="btn-primary mt-8">Mulai Percakapan</a>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="border-t border-ink/10">
+    <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-ink-soft">
+      <p>© <span id="year"></span> Ketut Agus Suardita. Dibuat dengan HTML, Tailwind CSS, dan JavaScript.</p>
+      <div class="flex gap-6 font-mono">
+        <a href="https://github.com/AgWebs" target="_blank" rel="noopener" class="hover:text-ink">GitHub</a>
+        <a href="https://www.linkedin.com/in/ketut-agus-suardita" target="_blank" rel="noopener" class="hover:text-ink">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
