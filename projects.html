@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="./output.css" rel="stylesheet">
+   <!-- <link href="dist/output.css" rel="stylesheet" /> -->
 </head>
 <body data-page="projects" class="antialiased">
 
@@ -51,6 +52,25 @@
     <section class="max-w-6xl mx-auto px-6 pt-4 pb-24">
       <div id="project-grid" class="grid md:grid-cols-2 gap-6">
 
+        <article id="sangket-desa" data-category="web" class="project-card border border-ink/10 p-8 flex flex-col">
+          <p class="font-mono text-xs text-lake mb-4">Web · Sistem Administrasi</p>
+          <h3 class="font-display text-2xl mb-3">Sangket Desa</h3>
+          <p class="text-sm text-ink-soft leading-relaxed flex-1">
+            Sistem administrasi desa dengan frontend Next.js + Refine dan backend Laravel,
+            mencakup lima modul CRUD untuk layanan warga. Termasuk penanganan otentikasi
+            dan sinkronisasi state form antara frontend dan API.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-6 mb-2 font-mono text-xs text-ink-soft">
+            <span class="border border-ink/15 px-2 py-1">Next.js</span>
+            <span class="border border-ink/15 px-2 py-1">Refine</span>
+            <span class="border border-ink/15 px-2 py-1">Laravel</span>
+          </div>
+          <div class="flex flex-wrap gap-5 mt-4">
+            <button class="detail-btn text-left text-sm font-medium text-ink border-b border-brass w-fit">Ringkasan cepat</button>
+            <a href="sangket-desa.html" class="text-sm font-medium text-ink border-b border-brass w-fit">Baca studi kasus →</a>
+          </div>
+        </article>
+
         <article id="kalkulator-bangun-ruang" data-category="web" class="project-card border border-ink/10 p-8 flex flex-col">
           <p class="font-mono text-xs text-lake mb-4">Web · Alat Interaktif</p>
           <h3 class="font-display text-2xl mb-3">Kalkulator Bangun Ruang</h3>
@@ -67,25 +87,6 @@
           <div class="flex flex-wrap gap-5 mt-4">
             <button class="detail-btn text-left text-sm font-medium text-ink border-b border-brass w-fit">Ringkasan cepat</button>
             <a href="demo-kalkulator-bangun-ruang.html" class="text-sm font-medium text-ink border-b border-brass w-fit">Coba demo →</a>
-          </div>
-        </article>
-
-        <article id="sangket-desa" data-category="web" class="project-card border border-ink/10 p-8 flex flex-col">
-          <p class="font-mono text-xs text-lake mb-4">Web · Sistem Administrasi</p>
-          <h3 class="font-display text-2xl mb-3">Sangket Desa</h3>
-          <p class="text-sm text-ink-soft leading-relaxed flex-1">
-            Sistem administrasi desa dengan frontend Next.js + Refine dan backend Laravel,
-            mencakup lima modul CRUD untuk layanan warga. Termasuk penanganan otentikasi
-            dan sinkronisasi state form antara frontend dan API.
-          </p>
-          <div class="flex flex-wrap gap-2 mt-6 mb-2 font-mono text-xs text-ink-soft">
-            <span class="border border-ink/15 px-2 py-1">Next.js</span>
-            <span class="border border-ink/15 px-2 py-1">Refine</span>
-            <span class="border border-ink/15 px-2 py-1">Laravel</span>
-          </div>
-          <div class="flex flex-wrap gap-5 mt-4">
-            <button class="detail-btn text-left text-sm font-medium text-ink border-b border-brass w-fit">Ringkasan cepat</button>
-            <!-- <a href="sangket-desa.html" class="text-sm font-medium text-ink border-b border-brass w-fit">Baca studi kasus →</a> -->
           </div>
         </article>
 
